@@ -9,7 +9,7 @@ export default function Home() {
 				<title>{siteTitle}</title>
 			</Head>
 			<section className={utilStyles.headingMd}>
-				<p>My own blog! Yay</p>
+				<p>[Your Self Introduction]</p>
 			</section>
 		</Layout>
 	)
