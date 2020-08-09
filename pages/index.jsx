@@ -1,19 +1,16 @@
-import styles from '../styles/index.module.scss'
-import Link from 'next/link'
 import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.scss'
 
-const Home = () => {
+export default function Home() {
 	return (
-		<div className={styles.hello}>
-			<h1>Hello from codedamn!</h1>
-			<Link href="/posts/first-post">
-				<a>Read This!</a>
-			</Link>
+		<Layout home>
 			<Head>
-				<title>My First Blog</title>
+				<title>{siteTitle}</title>
 			</Head>
-		</div>
+			<section className={utilStyles.headingMd}>
+				<p>My own blog! Yay</p>
+			</section>
+		</Layout>
 	)
 }
-
-export default Home
