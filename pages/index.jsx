@@ -1,28 +1,15 @@
-import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.scss'
+import styles from '../styles/index.module.scss'
+import Link from 'next/link'
 
-// Implement getStaticProps here
-
-export default function Home({ allPostsData = [] }) {
+const Home = () => {
 	return (
-		<Layout home>
-			<section className={utilStyles.headingMd}>
-				<p>My own blog! Yay</p>
-			</section>
-			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-				<h2 className={utilStyles.headingLg}>Blog</h2>
-				<ul className={utilStyles.list}>
-					{allPostsData.map(({ id, date, title }) => (
-						<li className={utilStyles.listItem} key={id}>
-							{title}
-							<br />
-							{id}
-							<br />
-							{date}
-						</li>
-					))}
-				</ul>
-			</section>
-		</Layout>
+		<div className={styles.hello}>
+			<h1>Hello from codedamn!</h1>
+			<Link href="/posts/first-post">
+				<a>Read This!</a>
+			</Link>
+		</div>
 	)
 }
+
+export default Home
