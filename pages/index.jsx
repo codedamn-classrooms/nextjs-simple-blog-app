@@ -1,15 +1,7 @@
 import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.scss'
-import { getSortedPostsData } from '../lib/posts'
 
-export async function getStaticProps() {
-	const allPostsData = await getSortedPostsData()
-	return {
-		props: {
-			allPostsData
-		}
-	}
-}
+// Implement getStaticProps here
 
 export default function Home({ allPostsData = [] }) {
 	return (
